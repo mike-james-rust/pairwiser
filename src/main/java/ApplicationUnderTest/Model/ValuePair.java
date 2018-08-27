@@ -14,4 +14,8 @@ public class ValuePair {
         this.pairOfValues = pairOfValues;
         isCovered = false;
     }
+    public ValuePair(Value value1, Value value2) {
+        this.pairOfValues = new Pair<>(value1,value2);
+        isCovered = false;
+    }
 }

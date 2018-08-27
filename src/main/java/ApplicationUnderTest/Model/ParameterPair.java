@@ -5,7 +5,7 @@ import javafx.util.Pair;
 import lombok.Getter;
 import lombok.Setter;
 
-public class ParameterPair implements Comparable<ParameterPair>{
+public class ParameterPair{
     @Getter @Setter
     Pair<Parameter, Parameter> pairOfParameters;
 
@@ -14,12 +14,7 @@ public class ParameterPair implements Comparable<ParameterPair>{
         this.pairOfParameters = new Pair<Parameter,Parameter>(parameter1,parameter2);
     }
 
-    @Override
-    public int compareTo(ParameterPair otherPair) {
-        int firstParameterComparable = pairOfParameters.getKey().compareTo(otherPair.getPairOfParameters().getKey());
-        if (firstParameterComparable == 0){
-            return pairOfParameters.getValue().compareTo(otherPair.getPairOfParameters().getValue());
-        }
-        return firstParameterComparable;
+    public ParameterPair(Pair<Parameter, Parameter> pairOfParameters) {
+        this.pairOfParameters = pairOfParameters;
     }
 }
