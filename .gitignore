@@ -26,3 +26,5 @@ hs_err_pid*
 .out/
 .idea/
 gradle/
+gradlew
+gradlew.bat
